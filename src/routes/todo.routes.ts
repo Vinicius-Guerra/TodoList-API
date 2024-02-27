@@ -1,9 +1,12 @@
 import { Router } from "express";
+import { TodoControllers } from "../constrollers/todo.controllers";
 
 export const todoRoutes = Router();
 
-todoRoutes.get("/");
-todoRoutes.get("/:id");
-todoRoutes.post("/");
-todoRoutes.patch("/:id");
-todoRoutes.delete("/:id");
+const todoControllers = new TodoControllers();
+
+todoRoutes.get("/", todoControllers.getAll);
+todoRoutes.get("/:id", todoControllers.getOne);
+todoRoutes.post("/", todoControllers.create);
+todoRoutes.patch("/:id", todoControllers.update);
+todoRoutes.delete("/:id", todoControllers.delete);

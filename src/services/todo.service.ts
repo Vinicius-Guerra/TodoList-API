@@ -1,5 +1,5 @@
 import { generateId, todoList } from "../database/database";
-import { TCreateTodoBody, TUpdateTodoBody } from "../interfaces/todo.interfaces";
+import { ITodo, TCreateTodoBody, TUpdateTodoBody } from "../interfaces/todo.interfaces";
 
 export class TodoService {
     getAll(search?: string){
@@ -11,6 +11,10 @@ export class TodoService {
         } else {
             return todoList;
         }
+    }
+
+    getOne(todo: ITodo){
+        return todo;
     }
 
     create(data: TCreateTodoBody){
@@ -37,5 +41,11 @@ export class TodoService {
 
             return newTodo;
         }
+    }
+
+    delete(id: number) {
+        const index = todoList.findIndex((todo) => todo.id === id);
+
+        todoList.splice(index, 1);
     }
 }    

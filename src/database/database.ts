@@ -1,6 +1,6 @@
-import { ITodo } from "../interfaces/todo.interfaces";
+import { TTodo } from "../interfaces/todo.interface";
 
-export const todoList: ITodo[] = [];
+export const todoList: TTodo[] = [];
 
 export let id = 0;
 

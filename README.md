@@ -19,13 +19,13 @@ Visão geral do projeto, um pouco das tecnologias usadas.
 # 3. Endpoints
 ## Indice
 * TodoList
-  * Post - /cars (Criação de uma noticia)
-  * Get = /cars (Leitura de todas as noticias)
-  * Get - /cars/:id (Criação de uma noticia especifica)
-  * Delete - /cars/:id (Apagar uma noticia)
-  * Patch - /cars/:id (Editar uma noticia)
+  * Post - /todos (Criação de uma noticia)
+  * Get = /rodos (Leitura de todas as noticias)
+  * Get - /rodos/:id (Criação de uma noticia especifica)
+  * Delete - /todos/:id (Apagar uma noticia)
+  * Patch - /todos/:id (Editar uma noticia)
 
- # 1. Cars
+ # 1. TodoList
 O objeto TodoList é definido como:
 ```json
   {
